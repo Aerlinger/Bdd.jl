@@ -13,7 +13,6 @@ module Spec
   function add(example::Example)
   end
 
-
   macro before(exp)
     # Define a new before
 
@@ -39,7 +38,7 @@ module Spec
     example = Spec.Example(ex)
     definition = Spec.SpecDefinitions(desc, [example])
 
-    esc(ex)
+    eval(Spec, ex)
   end
 end
 
