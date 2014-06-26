@@ -1,5 +1,5 @@
 module Spec
-  export @wrapper, @before, @it, println
+  export @describe, @before, @it, println
 
   type Example
     context::Expr
@@ -76,16 +76,19 @@ Spec.suite
 
 
 
-@describe "A simple example" begin
-  @before begin
-    before_var = 180
-  end
+#@describe "A simple example" begin
+#   @before begin
+#     before_var = 180
+#   end
 
-  @it begin
-    it_var = 87
-    before_var + it_var
-  end
-end
-println(Spec.suite)
+#   @it begin
+#     it_var = 87
+#     before_var + it_var
+#   end
+#end
+
+#println(what)
+
+#println(Spec.suite)
 
 
